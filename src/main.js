@@ -49,4 +49,8 @@ Close.onclick = function(){
 }
 
 
+// let dateTime = new Date();
+// let time = dateTime.toLocaleTimeString();
+// let date = dateTime.toLocaleDateString();
 
+// timeEl.textContent = Current Date/Time: ${date}, ${time};

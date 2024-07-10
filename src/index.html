@@ -80,7 +80,7 @@ width: 100%;
     }
 </style>
 <body>
-<nav class="bg-[#333333] text-[#FF8A08]  fixed z-50 w-full">
+<nav class="bg-[#333333] text-white  fixed z-50 w-full">
 <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
     <img src="img/logo-removebg-preview.png" class="h-10" alt="Logo" />
@@ -111,35 +111,33 @@ width: 100%;
 <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
 <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
 <li>
-<a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Technology</a>
+<a href="#technology" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Technology</a>
 </li>
 
 <li>
-<a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Support</a>
+<a href="#support" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Support</a>
 </li>
 <li>
-<a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+<a href="#store" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Store</a>
 </li>
 </ul> 
 <div class="py-1">
-<a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+<a href="#sitemap" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Site Map</a>
 </div>
 </div>
       </li>
     <li>
-      <a href="about.html" class="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 text-[#C0C0C0] md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gallery</a>
+      <a href="#gallery" class="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 text-[#C0C0C0] md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gallery</a>
     </li>
+  
     <li>
-      <a href="#" class="block py-2 px-3 text-[#C0C0C0] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-    </li>
-    <li>
-      <a href="#" class="block py-2 px-3 text-[#C0C0C0] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white m dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+      <a href="#contact" class="block py-2 px-3 text-[#C0C0C0] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white m dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
     </li>
   </ul>
 </div>
 <!-- Visitor Counter -->
 <div id="visitor-counter">
-    Loading visitor count...
+    Loading visitor count : 2
 </div>
 </div>
 </nav>
@@ -222,7 +220,9 @@ width: 100%;
 
 </section>
 <!--  -->
-<div class="grid grid-cols-1 md:grid-cols-2 m-16" id="#about">
+<p class="text-center text-3xl mt-5" id="about.html">About Us</p>
+<div class="h-1 w-28 bg-[#333333] mx-auto"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 m-16" >
 <div class="bg-gray-900 ">
 <img src="img/image-2-copyright-1536x864.jpg" alt="" class="md:h-96 h-fit">
 </div>
@@ -230,16 +230,15 @@ width: 100%;
 <h1 class="text-4xl my-6  font-bold">A Unique Watch <br> That Fits Your Style</h1>
 <div class="h-1 w-28 bg-[#333333]"></div>
 <h6 class="my-6 ">The new Lawson collection is already here! This quartz Lawson Franklin 38 model, designed with simplicity and elegance, is truly a cherry on the cake. Comes in different sizes and band colors, has a stainless steel back for a personalized engraving.</h6>
-<button class="text-md font-normal text-black     rounded-lg   group relative flex items-center overflow-hidden">
-  <a href="#gallery" class="inline-block bg-[#FF8A08] text-white font-bold py-2 px-4 rounded-full">Explore Now</a>
-</button>
+<button class="bg-black text-white px-5 py-3">Explore </button>
 </div>
 
 </div>
 
 <!--  -->
 <!-- store -->
-<h1 class="text-center text-3xl">Store</h1>
+<h1 class="text-center text-3xl" id="store">Store</h1>
+<div class=" w-28 bg-[#333333] mx-auto" style="height: 0.4px;"></div>
 <div class="grid md:grid-cols-3 grid-cols-1 gap-6 p-6 md:m-14 m-4">
   <!-- Watch Card -->
   <div class="card border border-gray-200 rounded-lg shadow-lg bg-white relative w-64 mx-auto">
@@ -355,7 +354,7 @@ width: 100%;
       <div class="vintage relative group overflow-hidden text-center p-4 shadow-lg border-2 rounded-lg border-secondary ">
         <div class="relative w-full h-64">
           <img src="img/vitage2.jpg" alt="Vintage Watch 2" class="vintage-img absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-100 group-hover:opacity-0">
-          <img src="image/smart2a.jpg" alt="Vintage Watch 2 Hover" class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+          <img src="img/IMG-20240704-WA0016.jpg" alt="Vintage Watch 2 Hover" class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100">
         </div>  
         <h3 class="text-xl font-bold mb-2 mt-4">Alberto Fusion</h3>
         <p class="text-lg mb-4">$350</p>
@@ -365,7 +364,7 @@ width: 100%;
       <div class="vintage relative group overflow-hidden text-center p-4 shadow-lg border-2 rounded-lg border-secondary ">
         <div class="relative w-full h-64">
           <img src="img/new_product1.png.webp" alt="Vintage Watch 3" class="vintage-img absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-100 group-hover:opacity-0">
-          <!-- <img src="image/smart3a.jpg" alt="Vintage Watch 3 Hover" class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100"> -->
+          <img src="img/download (1).jpeg" alt="Vintage Watch 3 Hover" class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100">
         </div>
         <h3 class="text-xl font-bold mb-2 mt-4">Alberto Syncro</h3>
         <p class="text-lg mb-4">$399</p>
@@ -379,7 +378,7 @@ width: 100%;
       <div class="vintage relative group overflow-hidden text-center p-4 border-2 rounded-lg border-secondary shadow-lg ">
         <div class="relative w-full h-64">
           <img src="img/smart3.jpg" alt="Vintage Watch 4" class="vintage-img absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-100 group-hover:opacity-0">
-          <!-- <img src="image/smart4a.jpg" alt="Vintage Watch 4 Hover" class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100"> -->
+          <img src="img/smart4.jpg" alt="Vintage Watch 4 Hover" class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100">
         </div>
         <h3 class="text-xl font-bold mb-2 mt-4">Alberto Edge</h3>
         <p class="text-lg mb-4">$1500</p>
@@ -389,7 +388,7 @@ width: 100%;
       <div class="vintage relative group overflow-hidden text-center p-4 shadow-lg border-2 rounded-lg border-secondary ">
         <div class="relative w-full h-64">
           <img src="img/popular2.png.webp" alt="Vintage Watch 5" class="vintage-img absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-100 group-hover:opacity-0">
-          <!-- <img src="image/smart5a.avif" alt="Vintage Watch 5 Hover" class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100"> -->
+          <img src="img/WhatsApp Image 2024-07-01 at 13.22.13_4c4a56a5.jpg" alt="Vintage Watch 5 Hover" class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100">
         </div>
         <h3 class="text-xl font-bold mb-2 mt-4">Alberto Vantage</h3>
         <p class="text-lg mb-4">$499</p>
@@ -789,7 +788,7 @@ width: 100%;
 <!-- stop -->
 <!-- technologies -->
 
-<section class="flex justify-center mt-7">
+<section class="flex justify-center mt-7" id="technology">
 <div class="w-[88%] bg-purple">
 <div class="flex md:flex-row flex-col gap-5">
   <div class="md:w-[50%] bg-blue- rounded-md flex flex-col justify-center items-center">
@@ -828,7 +827,7 @@ width: 100%;
 
 </section>
 <!--  -->
-<div class="container mx-auto p-6">
+<div class="container mx-auto p-6" id="support">
 <h2 class="text-3xl font-bold text-center mb-8">Support</h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-7">
   <!-- Technology Card -->
@@ -884,8 +883,9 @@ width: 100%;
 </div>
 <!--  -->
 <!-- galary -->
-<div class="max-w-6xl mx-auto py-8">
-  <h2 class="text-3xl font-bold text-center mb-8">Gallery</h2>
+<div class="max-w-6xl mx-auto py-8" id="gallery">
+  <h2 class="text-3xl font-bold text-center ">Gallery</h2>
+  <div class=" w-28 bg-[#333333] mx-auto mb-8" style="height: 0.4px;"></div>
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
     <div class="overflow-hidden rounded-lg">
       <img src="img/popular1.png.webp" alt="Image 1" class="w-full h-full object-cover">
@@ -915,7 +915,7 @@ width: 100%;
 </div>
 <!--  -->
 <!-- contact -->
-<div class="grid grid-cols-1 md:grid-cols-2 m-6 gap-3 md:gap-0">
+<div class="grid grid-cols-1 md:grid-cols-2 m-6 gap-3 md:gap-0" id="contact">
 <div class="h-[100vh]">
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64921571.00367336!2d-70.59022070000002!3d6.708883700000023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b995b41b7dd6d%3A0xb6c08985374e0e09!2sAptech%20Computer%20Education%20-Sango%20Ota!5e0!3m2!1sen!2sng!4v1719932670289!5m2!1sen!2sng"  height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="h-full w-full"></iframe>
 </div>
@@ -1003,7 +1003,8 @@ width: 100%;
     <div class="flex gap-10">
       <div id="time"></div>
       <div id="date"></div>
-      <div id="location"></div>
+      <div class="z-10 text-white" id="location"></div>
+
     </div>
   </marquee>
 </div>
