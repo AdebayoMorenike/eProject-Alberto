@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery Section</title>
+  <link rel="stylesheet" href="style.css">
+<link href="./output.css" rel="stylesheet">
+  <!-- <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet"> -->
+</head>
+<body>
+  <nav class="bg-[#333333] text-[#FF8A08]  fixed z-50 w-full">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="img/logo-removebg-preview.png" class="h-10" alt="Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Alberto Watch</span>
+    </a>
+    <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+    </button>
+    
+    <div class="hidden w-full md:block md:w-auto text-[#C0C0C0]" id="navbar-dropdown">
+      <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700 text-[#C0C0C0]">
+        <li>
+          <a href="index.html" class="block py-2 px-3 text-[#C0C0C0] rounded md:bg-transparent md:p-0   md:dark:bg-transparent" aria-current="page">Home</a>
+        </li>
+        <li>
+          <a href="#about.html" class="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 text-[#C0C0C0] md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"  >About</a>
+        </li>
+        <li>
+            <buttons id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-[#C0C0C0] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 md:w-auto dark:text-whitedark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Dropdown <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+    </svg></buttons>
+            <!-- Dropdown menu -->
+          
+              <!-- Dropdown menu -->
+    <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+    <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+    <li>
+    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+    </li>
+    
+    <li>
+    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+    </li>
+    <li>
+    <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+    </li>
+    </ul> 
+    <div class="py-1">
+    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+    </div>
+    </div>
+          </li>
+        <li>
+          <a href="about.html" class="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 text-[#C0C0C0] md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-[#C0C0C0] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+        </li>
+        <li>
+          <a href="#" class="block py-2 px-3 text-[#C0C0C0] rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0  md:p-0 dark:text-white m dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Visitor Counter -->
+    <div id="visitor-counter">
+        Loading visitor count...
+    </div>
+    </div>
+</nav>
+<section class="bg-no-repeat bg-cover bg-center h-screen flex items-center justify-center" style="background-image: url(img/download.png);">
+  <div class="flex w-[80%] ">
+    <div class="w-[50%]  pt-12">
+      <h1 class="text-white text-5xl font-bold">Time Keeps Ticking,<br> Make Every Moment <br>Count.</h1>
+      <p class="text-white my-4">We strive to provide all kinds of watches, from classic to the latest<br> designs. We sell authentic products with warranties.</p>
+      <button class="bg-black text-white px-5 py-3">Shop Now </button>
+    </div>
+    <div class=" h-fit w-[50%] ">
+      <div class="" id="support">
+        <h1 class="text-5xl font-bold text-white text-center ">Collection</h1>
+        <div class="text-gray-800 p-6">
+            <div class="mx-auto  shadow-md rounded-lg">
+                <!-- Tabs -->
+                <div class="border-b border-gray-200 text-[#FF8A08]">
+                    <nav class="flex flex-wrap -mb-px text-[#FF8A08]" id="tabs">
+                        <button data-target="tab1" class="tab-link px-4 py-2 font-bold text-touch border-b-2 border-blue-600 focus:outline-none">
+                            Luxury
+                        </button>
+                        <button data-target="tab2" class="tab-link px-4 py-2 font-bold text-touch border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 focus:outline-none">
+                            Vintage
+                        </button>
+                        <button data-target="tab3" class="tab-link px-4 py-2 font-bold text-touch border-b-2 border-transparent hover:text-blue-600 hover:border-blue-600 focus:outline-none">
+                            Smart
+                        </button>
+                    </nav>
+                </div>
+        
+                <!-- Tab Content -->
+                <div class="p-6">
+                    <div id="tab1" class="tab-content">
+                      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                        <div class="overflow-hidden rounded-lg">
+                          <img src="img/popular1.png.webp" alt="Luxury Image 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="overflow-hidden rounded-lg">
+                          <img src="img/WhatsApp Image 2024-07-01 at 13.22.13_4c4a56a5.jpg" alt="Luxury Image 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="overflow-hidden rounded-lg">
+                          <img src="img/IMG-20240704-WA0016.jpg" alt="Luxury Image 3" class="w-full h-full object-cover">
+                        </div>
+                      </div>
+                    </div>
+        
+                    <div id="tab2" class="tab-content hidden">
+                      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                        <div class="overflow-hidden rounded-lg">
+                          <img src="img/smart.jpg" alt="Luxury Image 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="overflow-hidden rounded-lg">
+                          <img src="img/smart2.jpg" alt="Luxury Image 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="overflow-hidden rounded-lg">
+                          <img src="img/smart4.jpg" alt="Luxury Image 3" class="w-full h-full object-cover">
+                        </div>
+                      </div>
+                    </div>
+                    <div id="tab3" class="tab-content hidden">
+                      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                        <div class="overflow-hidden rounded-lg">
+                          <img src="img/vintage1.jpg" alt="Luxury Image 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="overflow-hidden rounded-lg">
+                          <img src="img/vintagf.jpg" alt="Luxury Image 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="overflow-hidden rounded-lg">
+                          <img src="img/vitage2.jpg" alt="Luxury Image 3" class="w-full h-full object-cover">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+ </div>
+  </div>
+
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 m-16" id="#about">
+  <div class="bg-gray-900 ">
+  <img src="img/image-2-copyright-1536x864.jpg" alt="" class="md:h-96 h-fit">
+  </div>
+  <div class=" h-96  p-5">
+  <h1 class="text-4xl my-6  font-bold">A Unique Watch <br> That Fits Your Style</h1>
+  <div class="h-1 w-28 bg-[#333333]"></div>
+  <h6 class="my-6 ">The new Lawson collection is already here! This quartz Lawson Franklin 38 model, designed with simplicity and elegance, is truly a cherry on the cake. Comes in different sizes and band colors, has a stainless steel back for a personalized engraving.</h6>
+  <button class="text-md font-normal text-black     rounded-lg   group relative flex items-center overflow-hidden">
+    <a href="#gallery" class="inline-block bg-[#FF8A08] text-white font-bold py-2 px-4 rounded-full">Explore Now</a>
+  </button>
+  </div>
+  
+  </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".tab-link");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            // Remove active classes
+            tabs.forEach(item => item.classList.remove("text-blue-600", "border-blue-600"));
+            contents.forEach(content => content.classList.add("hidden"));
+
+            // Add active classes to the clicked tab and show its content
+            tab.classList.add("text-blue-600", "border-blue-600");
+            document.getElementById(tab.getAttribute("data-target")).classList.remove("hidden");
+        });
+    });
+});
+</script>
+</body>
+</html>
+

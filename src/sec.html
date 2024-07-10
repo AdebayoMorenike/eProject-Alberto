@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vintage Watches</title>
+  <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 50;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-content {
+      background-color: #333;
+      color: white;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 8px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-900">
+
+  <section id="vintage-watches" class="w-[90%] justify-center mx-auto py-10">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-4 font-display uppercase"><span class="text-secondary">Smart</span> Watches</h2>
+      <p class="text-lg text-center mb-12">Stay connected and ahead of the curve with our cutting-edge smart watch collection,<br> designed for the modern lifestyle.</p>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Watch Item 1 -->
+        <div class="vintage relative group overflow-hidden text-center p-4 shadow-lg border-2 rounded-lg border-secondary ">
+          <div class="relative w-full h-64">
+            <img src="img/vintage1.jpg" alt="Vintage Watch 1" class="vintage-img absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+            <img src="img/vintagf.jpg" alt="Vintage Watch 1 Hover" class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+          </div>
+          <h3 class="text-xl font-bold mb-2 mt-4">Alberto Pulse Pro</h3>
+          <p class="text-lg mb-4">$500</p>
+          <button class="view-details-btn px-10 py-3 rounded-md border bg-[#333333] bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-white hover:text-primary font-medium" type="button" onclick="openModal()">View Details</button>
+        </div>
+        <!-- Watch Item 2 -->
+        <div class="vintage relative group overflow-hidden text-center p-4 shadow-lg border-2 rounded-lg border-secondary ">
+          <div class="relative w-full h-64">
+            <img src="img/vitage2.jpg" alt="Vintage Watch 2" class="vintage-img absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+            <img src="image/smart2a.jpg" alt="Vintage Watch 2 Hover" class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+          </div>
+          <h3 class="text-xl font-bold mb-2 mt-4">Alberto Fusion</h3>
+          <p class="text-lg mb-4">$350</p>
+          <button class="view-details-btn px-10 py-3 rounded-md border bg-[#333333] bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-white hover:text-primary font-medium" type="button" onclick="openModal()">View Details</button>
+        </div>
+        <!-- Watch Item 3 -->
+        <div class="vintage relative group overflow-hidden text-center p-4 shadow-lg border-2 rounded-lg border-secondary ">
+          <div class="relative w-full h-64">
+            <img src="img/new_product1.png.webp" alt="Vintage Watch 3" class="vintage-img absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+            <!-- <img src="image/smart3a.jpg" alt="Vintage Watch 3 Hover" class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100"> -->
+          </div>
+          <h3 class="text-xl font-bold mb-2 mt-4">Alberto Syncro</h3>
+          <p class="text-lg mb-4">$399</p>
+          <button class="view-details-btn px-10 py-3 rounded-md border bg-[#333333] bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-white hover:text-primary font-medium" type="button" onclick="openModal()">View Details</button>
+        </div>
+      </div>
+
+      <!-- Second row of watches -->
+      <div class="grid md:grid-cols-3 gap-8 mt-10">
+        <!-- Watch Item 4 -->
+        <div class="vintage relative group overflow-hidden text-center p-4 border-2 rounded-lg border-secondary shadow-lg ">
+          <div class="relative w-full h-64">
+            <img src="img/smart3.jpg" alt="Vintage Watch 4" class="vintage-img absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+            <!-- <img src="image/smart4a.jpg" alt="Vintage Watch 4 Hover" class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100"> -->
+          </div>
+          <h3 class="text-xl font-bold mb-2 mt-4">Alberto Edge</h3>
+          <p class="text-lg mb-4">$1500</p>
+          <button class="view-details-btn px-10 py-3 rounded-md border bg-[#333333] bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-white hover:text-primary font-medium" type="button" onclick="openModal()">View Details</button>
+        </div>
+        <!-- Watch Item 5 -->
+        <div class="vintage relative group overflow-hidden text-center p-4 shadow-lg border-2 rounded-lg border-secondary ">
+          <div class="relative w-full h-64">
+            <img src="img/popular2.png.webp" alt="Vintage Watch 5" class="vintage-img absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+            <!-- <img src="image/smart5a.avif" alt="Vintage Watch 5 Hover" class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100"> -->
+          </div>
+          <h3 class="text-xl font-bold mb-2 mt-4">Alberto Vantage</h3>
+          <p class="text-lg mb-4">$499</p>
+          <button class="view-details-btn px-10 py-3 rounded-md border bg-[#333333] bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-white hover:text-primary font-medium" type="button" onclick="openModal()">View Details</button>
+        </div>
+        <!-- Watch Item 6 -->
+        <div class="vintage relative group overflow-hidden text-center p-4 shadow-lg border-2 rounded-lg border-secondary ">
+          <div class="relative w-full h-64">
+            <img src="img/vintagf.jpg" alt="Vintage Watch 6" class="vintage-img absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+            <img src="img/IMG-20240704-WA0018.jpg" alt="Vintage Watch 6 Hover" class="absolute inset-0 w-full h-full object-cover rounded-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+          </div>
+          <h3 class="text-xl font-bold mb-2 mt-4">Alberto Zenith</h3>
+          <p class="text-lg mb-4">$549</p>
+          <button class="view-details-btn px-10 py-3 rounded-md border bg-[#333333] bg-none hover:bg-secondary ease-in duration-300 w-[100%] text-white hover:text-primary font-medium" type="button" onclick="openModal()">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 class="text-xl font-semibold">Heritage Elegance Watch</h3>
+      <img src="img/IMG-20240704-WA0018.jpg" alt="" class="w-[280px] h-[280px] mx-auto my-4">
+      <p class="text-primary"><span class="font-bold">Description:</span> A timeless design featuring a stainless steel case and a luxurious leather strap. Perfect for any occasion.</p>
+      <div class="flex items-center justify-around mt-4">
+        <button class="cart text-primary hover:text-white ease-in duration-300 bg-gray-100 hover:bg-secondary focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center border-2 hover:border-none border-secondary">
+          Add to cart
+        </button>
+        <button class="py-2.5 px-5 text-sm font-medium text-primary hover:text-white rounded-md border-2 hover:border-none border-secondary hover:bg-secondary" onclick="closeModal()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      var modal = document.getElementById("myModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
+
+
+
+
+
+<div class="max-w-6xl mx-auto py-8">
+  <h2 class="text-3xl font-bold text-center mb-8">Gallery</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
+    <div class="overflow-hidden rounded-lg">
+      <img src="img/popular1.png.webp" alt="Image 1" class="w-full h-full object-cover">
+    </div>
+    <div class="overflow-hidden rounded-lg">
+      <img src="img/popular2.png.webp" alt="Image 2" class="w-full h-full object-cover">
+    </div>
+    <div class="overflow-hidden rounded-lg">
+      <img src="img/product-01.png" alt="Image 3" class="w-full h-full object-cover">
+    </div>
+    <div class="overflow-hidden rounded-lg">
+      <img src="img/IMG-20240704-WA0017.jpg" alt="Image 4" class="w-full h-full object-cover">
+    </div>
+    <div class="overflow-hidden rounded-lg">
+      <img src="img/new_product2.png.webp" alt="Image 5" class="w-full h-full object-cover">
+    </div>
+    <div class="overflow-hidden rounded-lg">
+      <img src="img/WhatsApp Image 2024-07-01 at 13.22.13_4c4a56a5.jpg" alt="Image 6" class="w-full h-full object-cover">
+    </div>
+    <div class="overflow-hidden rounded-lg">
+      <img src="img/IMG-20240704-WA0016.jpg" alt="Image 7" class="w-full h-full object-cover">
+    </div>
+    <div class="overflow-hidden rounded-lg">
+      <img src="img/smart.jpg" alt="Image 8" class="w-full h-full object-cover">
+    </div>
+  </div>
+</div>

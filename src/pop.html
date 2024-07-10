@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card with Add to Cart</title>
+  <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+    }
+
+    .modal-content {
+      background-color: #333;
+      color: white;
+      margin: 15% auto; /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 50%; /* Could be more or less, depending on screen size */
+      border-radius: 8px;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="bg-[#333333] p-6" style="background-color: #333;">
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
+    <!-- Watch Card -->
+    <div class="card border border-gray-200 rounded-lg shadow-lg  max-w-xs mx-auto">
+      <img class="card-img rounded-t-lg w-full h-48 object-cover" src="img/smart.jpg" alt="Stainless Steel Dial Watch">
+      <div class="p-5">
+        <p class="mb-2 text-center tracking-tight text-white">Stainless Steel Dial</p>
+        <p class="text-center text-white">$3,000.00</p>
+        <div class="text-center">
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md addToCartBtn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Watch Card -->
+    <div class="card border border-gray-200 rounded-lg shadow-lg  max-w-xs mx-auto">
+      <img class="card-img rounded-t-lg w-full h-48 object-cover" src="img/smart.jpg" alt="Stainless Steel Dial Watch">
+      <div class="p-5">
+        <p class="mb-2 text-center tracking-tight text-white">Stainless Steel Dial</p>
+        <p class="text-center text-white">$3,000.00</p>
+        <div class="text-center">
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md addToCartBtn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Watch Card -->
+    <div class="card border border-gray-200 rounded-lg shadow-lg  max-w-xs mx-auto">
+      <img class="card-img rounded-t-lg w-full h-48 object-cover" src="img/smart.jpg" alt="Stainless Steel Dial Watch">
+      <div class="p-5">
+        <p class="mb-2 text-center tracking-tight text-white">Stainless Steel Dial</p>
+        <p class="text-center text-white">$3,000.00</p>
+        <div class="text-center">
+          <button class="bg-blue-500 text-white px-4 py-2 rounded-md addToCartBtn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Modal -->
+  <div id="addToCartModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>The item has been added to your cart!</p>
+    </div>
+  </div>
+
+  <script>
+    // Get all the add to cart buttons
+    var addToCartBtns = document.querySelectorAll('.addToCartBtn');
+
+    // Get the modal
+    var modal = document.getElementById("addToCartModal");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    addToCartBtns.forEach(function(btn) {
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+    });
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
